@@ -1,6 +1,6 @@
 /**
-*	@author
-*	@date
+*	@Markus Becerra
+*	@09/05/2019
 *	@file LinkedList.hpp
 *	@brief Implementation file for templated LinkedList class
 */
@@ -38,10 +38,18 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
-	/** TODO
-		Fix this method
-	*/
-
+	for(int i = 0; i < m_size; i++)
+	{
+		if(temp.getValue() == value)
+		{
+			isFound = true;
+			break;
+		}
+		else
+		{
+			temp = temp -> getNext();
+		}
+	}
 	return(isFound);
 }
 
